@@ -1,0 +1,6 @@
+public class DragonCurve{
+    public static void main(String[] args){
+	String curve0 = "F";
+	String curve1 = curve0 + "L" + 
+    }
+}
