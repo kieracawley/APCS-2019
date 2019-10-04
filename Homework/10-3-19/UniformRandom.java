@@ -1,0 +1,14 @@
+public class UniformRandom{
+    public static void main(String[] args){
+	double a = Math.random();
+	double b = Math.random();
+	double c = Math.random();
+	double d = Math.random();
+	double e = Math.random();
+	double mean = (a + b + c + d + e) / 5;
+	double minNum = Math.min(Math.min(Math.min(Math.min(a, b), c), d), e);
+	double maxNum = Math.max(Math.max(Math.max(Math.max(a, b), c), d), e);
+	System.out.println("Numbers: " + a + ", " + b + ", " + c + ", " + d + ", " + e + " Mean: " + mean + " Min: " + minNum + " Max: " + maxNum);
+	
+    }
+}

@@ -1,0 +1,5 @@
+public class RandomGaussian{
+    public static void main(String[] args){
+	double r = Math.sin(2 * Math.pi * Math.random()) * Math.pow((-2 * Math.log(Math.random())), (1/2));
+    }
+}
