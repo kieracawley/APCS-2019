@@ -1,0 +1,8 @@
+public class Trig{
+    public static void main(String[] args){
+	double a = Double.parseDouble(args[0]);
+	System.out.println("sin(" + a + ") = " + Math.sin(a));
+	System.out.println("cos(" + a + ") = " + Math.cos(a));
+	System.out.println("tan(" + a + ") = " + Math.tan(a));
+    }
+}
