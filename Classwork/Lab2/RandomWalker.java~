@@ -1,0 +1,19 @@
+/*
+  Write a program RandomWalker.java that takes an integer command-line
+  argument N and simulates the motion of a random walker for N steps.
+  After each step, print the location of the random walker, treating
+  the lamp post as the origin (0, 0). Also, print the square of the
+  final distance from the origin.
+ */
+
+public class RandomWalker{
+    public static void main(String[] args){
+	int steps = Integer.parseInt(args[0]);
+	int x = 0;
+	int y = 0;
+	while(steps > 0){
+	    int direction = (int)(Math.random() * 4)
+	    steps -= 1;
+	}
+    }
+}

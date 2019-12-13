@@ -1,0 +1,10 @@
+public class Hex{
+    public static void main(String[] args){
+	int x = 0x11;
+	String base10 = 0;
+	while (x > 0){
+	    base10 = (x % 16) + base10;
+	    x = x/16;
+	}
+    }
+}

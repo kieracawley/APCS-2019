@@ -1,0 +1,26 @@
+/* 
+   Suppose a, b, and c are random number uniformly distributed between 0 and 1. 
+   What is the probability that a, b, and c form the side length of some triangle?
+   What is the probability that they will form an obtuse triangle?
+*/
+public class ProbabilityTriangle{
+    public static void main(String[] args){
+	double triangle = 0;
+	double obtuse = 0;
+	for(int i = 0; i<10000; i++){
+	    double a = Math.random();
+	    double b = Math.random();
+	    double c = Math.random();
+	    if (a + b > c && a + c > b && b + c > a){
+		triangle += 1;
+		if (a*a + b*b > c*c && a*a + c*c > b*b && b*b + c*c > a*a){
+		    obtuse++;
+		};
+	    };
+	}
+	System.out.println("Triangle Probability: " + triangle/10000);
+	/* approximately 50% */
+	System.out.println("Obtuse Probability: " + obtuse/10000);
+	/* approximately 21% */
+    }
+}

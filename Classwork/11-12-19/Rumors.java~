@@ -1,0 +1,25 @@
+import java.util.Arrays;
+public class Rumors{
+    public static void main(String[] args){
+	int guestCount = Integer.parseInt(args[0]);
+	Boolean[] guests = new Boolean[guestCount];
+	guests[0] = true;
+	for(int i = 1; i < guestCount; i++){
+	    guests[i] = false;
+	}
+	Boolean complete = false;
+	int prevGuest = 0;
+	while(!complete){
+	    int newGuest = (int)(Math.random() * (guestCount - 1));
+	    if (newGuest >= prevGuest) newGuest++;
+	    if (guests[newGuest]){
+		complete = false;
+	    }
+	    else{
+		prevGuest = newGuest;
+		guests[newGuest] = true;
+	    }
+	    System.out.println(Arrays.toString(guests));
+	}
+    }
+}

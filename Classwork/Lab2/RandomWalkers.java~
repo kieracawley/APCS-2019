@@ -1,0 +1,28 @@
+/*
+  Write a program RandomWalkers.java that takes two integer command-line
+  arguments N and T. In each of T independent experiments, simulate a
+  random walk of N steps and compute the squared distance. Output the
+  mean squared distance (the average of the T squared distances).
+ */
+public class RandomWalkers{
+    public static void main(String[] args){
+	int iterations = Integer.parseInt(args[1]);
+	double  squaredDistance = 0.0;
+	while(iterations > 0){
+	    int steps = Integer.parseInt(args[0]);
+	    int x = 0;
+	    int y = 0;
+	    while(steps > 0){
+		int direction = (int)(Math.random() * 4);
+		if (direction == 0) x += 1;
+		if (direction == 1) x -= 1;
+		if (direction == 2) y += 1;
+		if (direction == 3) y -= 1;
+		steps -= 1;
+	    }
+	    squaredDistance += ((x * x) + (y * y));
+	    iterations += 1;
+	}
+	System.out.println("mean squared distance = " + (squaredDistance / Integer.parseInt(args[1])));
+    }
+}

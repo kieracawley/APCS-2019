@@ -1,0 +1,9 @@
+public class Galton{
+    public static void main(String[] args){
+	int marbles = Integer.parseInt(args[0]);
+	int channelCount = Integer.parseInt(args[1]);
+	int[] channels = new int[channelCount];
+	for(int i = 0; i < channelCount; i++) channels[i] = 0;
+	double start = channelCount / 2.0;
+    }
+}

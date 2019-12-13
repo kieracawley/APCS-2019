@@ -1,0 +1,7 @@
+public class Hadamard{
+    public static void main(String[] args){
+	int iterations = Integer.parseInt(args[0]);
+	boolean[][] h = new boolean[Math.pow(2,iterations)][Math.pow(2,iterations)];
+	for(int )
+    }
+}
